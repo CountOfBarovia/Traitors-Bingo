@@ -12,6 +12,5 @@ function random_array(cells){
         output[i] = unused[index];
         unused.splice(index, 1);
     }
-    document.getElementById("demo").innerHTML = output[0];
     return output;
 }
