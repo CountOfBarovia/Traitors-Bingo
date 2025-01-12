@@ -19,9 +19,6 @@
             <h1>Traitors Bingo Card generator!</h1>
             <h2>Create and use a random bingo card for to use 
                 with your family or friends!</h2>
-            <script>
-                let table = random_array(cells)
-            </script>
             <p id="demo">Nothing</p>
             <table>
                 <tr>
@@ -41,13 +38,11 @@
                 </tr>
             </table>
             <script>
-                let i = 1
-                for (const row of table) {
-                    for (const cell of row) {
-                        document.getElementById(String(i)).innerHTML = cell
-                        document.getElementById("demo").innerHTML = cell
-                        i++
-                    }
+                let i = 1;
+                let table = random_array(cells);
+                for (const cell of table) {
+                    document.getElementById(String(i)).innerHTML = cell;
+                    i++;
                 }
             </script>
         </header>
