@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="TableData.js"></script>
         <style>
             body {background-color:#720033;}
             h1 {color:#ff8201;}
@@ -18,23 +19,35 @@
             <h1>Traitors Bingo Card generator!</h1>
             <h2>Create and use a random bingo card for to use 
                 with your family or friends!</h2>
+            <script>
+                let table = random_array(cells)
+            </script>
             <table>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td id="1"></td>
+                    <td id="2"></td>
+                    <td id="3"></td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td id="4""></td>
+                    <td id="5"></td>
+                    <td id="6"></td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td id="7"></td>
+                    <td id="8"></td>
+                    <td id="9"></td>
                 </tr>
             </table>
+            <script>
+                let i = 1
+                for (const row of table) {
+                    for (const cell of row) {
+                        document.getElementById(String(i)).innerHTML = cell
+                        i++
+                    }
+                }
+            </script>
         </header>
     </body>
 </html>
