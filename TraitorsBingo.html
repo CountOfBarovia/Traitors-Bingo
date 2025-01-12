@@ -9,7 +9,7 @@
             p {color:#ff8201;}
             table {height:600px; width: 600px;}
             table, th, td {border: 10px #ff8201;background-color: black;}
-            td {border-color: #ff8201; border-style: groove; padding: 20px;}
+            td {border-color: #ff8201; border-style: groove; padding: 20px; color: #ff8201;}
         </style>
         <title>The Traitors Bingo Card</title>
     </head>
@@ -22,6 +22,7 @@
             <script>
                 let table = random_array(cells)
             </script>
+            <p id="demo">Nothing</p>
             <table>
                 <tr>
                     <td id="1"></td>
@@ -44,6 +45,7 @@
                 for (const row of table) {
                     for (const cell of row) {
                         document.getElementById(String(i)).innerHTML = cell
+                        document.getElementById("demo").innerHTML = cell
                         i++
                     }
                 }
